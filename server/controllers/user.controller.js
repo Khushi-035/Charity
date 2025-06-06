@@ -31,9 +31,9 @@ const registerProfile = async (profile) => {
   const { fullname, password, email } = profile;
 
   const user = await registerUser(fullname, password, email, false);
-  const message = `Thank you for registering at Sharity. Have a great day ahead. 
+  const message = `Thank you for registering at Charity. Have a great day ahead. 
   Please confirm your email using the given link to continue to the site. ${CLIENT_URL}/confirm?userId=${user._id}`;
-  await sendMail(email, 'Thank you for registering at Sharity', message);
+  await sendMail(email, 'Thank you for registering at Charity', message);
 
   return user;
 }

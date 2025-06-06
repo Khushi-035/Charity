@@ -74,7 +74,7 @@ export default function Globe()
             console.log("here");
             const data = new FormData()
             data.append("file",image)
-            data.append("upload_preset","sharity")
+            data.append("upload_preset", "charity")
             data.append("cloud_name",process.env.REACT_APP_CLOUD_NAME)
             fetch(`https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`,{
                 method:"post",

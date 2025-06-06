@@ -1,135 +1,238 @@
-@import url('https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-.header-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 8vh;
-    justify-content: space-between;
-    padding-right:20px;
-    padding-left:20px;
+.header-container,
+.header-container-dark {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
-.logo{
-    display: flex;
-    font-size: 50px;
-    color: #E40A2D;
-    padding: 10px;
-    justify-content: center;
-    align-items: flex-end;
-    font-weight: bold;
-    font-family: 'Twinkle Star', cursive;
+.header-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.links{
-    display: flex;
-    width: 70%;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+.header-container-dark {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.link{
-    color: black;
-    text-decoration: none;
-    display: flex;
-    margin: 0px 10px;
-    transition: linear 500ms;
+.logo,
+.logo-dark {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #e40a2d;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.link:hover{
-    font-weight: bold;
+.logo::after,
+.logo-dark::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #e40a2d;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
 }
 
-.UserName{
-    display: flex;
-    align-items: center;
-    width: 20%;
-    justify-content: center;
-    padding: 5px 10px;
-    font-weight: bold;
+.logo:hover::after,
+.logo-dark:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
-.Login{
-    display: flex;
-    align-items: center;
-    width: 10%;
-    justify-content: center;
-    padding: 5px 10px;
-    font-weight: bold;
+.logo:hover,
+.logo-dark:hover {
+  transform: translateY(-2px);
 }
 
-.UserName:hover{
-    cursor: pointer;
+.links,
+.links-dark {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
-
-/************************/
-
-.header-container-dark{
-    position: absolute;
-    display: flex;
-    width: 95vw;
-    flex-direction: row;
-    align-items: center;
-    height: 8vh;
-    justify-content: space-between;
-    padding-right:20px;
-    padding-left:20px;
-    color: white;
+.link,
+.link-dark {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.logo-dark{
-    display: flex;
-    font-size: 50px;
-    color: #E40A2D;
-    padding: 10px;
-    justify-content: center;
-    align-items: flex-end;
-    font-weight: bold;
-    font-family: 'Twinkle Star', cursive;
-    text-shadow:1px 1px 10px #000, 1px 1px 15px #ccc;
-    text-align:center;
+.link {
+  color: #2c3e50;
 }
 
-.links-dark{
-    display: flex;
-    width: 70%;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+.link-dark {
+  color: #ffffff;
 }
 
-.link-dark{
-    color: white;
-    text-decoration: none;
-    display: flex;
-    margin: 0px 10px;
-    transition: linear 500ms;
+.link::after,
+.link-dark::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #e40a2d;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
-.link-dark:hover{
-    font-weight: bold;
+.link:hover::after,
+.link-dark:hover::after {
+  width: 80%;
 }
 
-.UserName-dark{
-    display: flex;
-    align-items: center;
-    width: 20%;
-    justify-content: center;
-    padding: 5px 10px;
-    font-weight: bold;
+.link:hover,
+.link-dark:hover {
+  color: #e40a2d;
 }
 
-.Login-dark{
-    display: flex;
-    align-items: center;
-    width: 10%;
-    justify-content: center;
-    padding: 5px 10px;
-    font-weight: bold;
+.UserName,
+.UserName-dark,
+.Login,
+.Login-dark {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  margin-left: 1rem;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.UserName-dark:hover{
-    cursor: pointer;
+.UserName,
+.Login {
+  color: #2c3e50;
+  background: rgba(228, 10, 45, 0.1);
+}
+
+.UserName-dark,
+.Login-dark {
+  color: #ffffff;
+  background: rgba(228, 10, 45, 0.2);
+}
+
+.Login,
+.Login-dark {
+  background: rgba(228, 10, 45, 0.1);
+  border: 1px solid rgba(228, 10, 45, 0.2);
+}
+
+.Login-dark {
+  background: rgba(228, 10, 45, 0.2);
+  border: 1px solid rgba(228, 10, 45, 0.3);
+}
+
+.Login:hover,
+.Login-dark:hover {
+  background: rgba(228, 10, 45, 0.2);
+  border-color: rgba(228, 10, 45, 0.4);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.UserName:hover,
+.UserName-dark:hover {
+  background: rgba(228, 10, 45, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .header-container,
+  .header-container-dark {
+    padding: 0.5rem 1rem;
+    height: 55px;
+  }
+
+  .logo,
+  .logo-dark {
+    font-size: 1.4rem;
+  }
+
+  .links,
+  .links-dark {
+    gap: 0.8rem;
+  }
+
+  .link,
+  .link-dark {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .UserName,
+  .UserName-dark,
+  .Login,
+  .Login-dark {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container,
+  .header-container-dark {
+    padding: 0.4rem 0.8rem;
+    height: 50px;
+  }
+
+  .logo,
+  .logo-dark {
+    font-size: 1.2rem;
+  }
+
+  .links,
+  .links-dark {
+    gap: 0.4rem;
+  }
+
+  .link,
+  .link-dark {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .UserName,
+  .UserName-dark,
+  .Login,
+  .Login-dark {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    margin-left: 0.3rem;
+  }
 }
