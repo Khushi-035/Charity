@@ -37,20 +37,17 @@ Sharity is a web platform where you can upload and donate your used and discarde
 
 - ⬆️ **Upload**: It provides a platform, where people can upload their discarded winter wear for the needy person or the donation centres around them to get contacted.
 
-![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/56017960/147406929-7acf9e82-3020-4e6d-b24b-b82eea8a6e8d.gif)
 
 - 🔍 **Explore**: A unique 3D Globe UI displaying items to be donated for people to determine location easily and request.
 
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/56017960/147406973-82d023c6-e758-4495-94cb-a6ba41de0fa9.gif)
 
 - 💙 **Donation Centers**: If someone doesn't wish to donate individually, they can contact other donation organizations. A single page displaying contact details of a few popular donation centres.
-  ![image](https://user-images.githubusercontent.com/56017960/147406905-430e23b0-0ca3-433f-a71d-6766776e50bb.png)
+
 
 ### Architecture:
 
 The website is enabled to perform complete transaction cycle for a user such as **Register, Email Verification, Add/Delete Items and Logout**. There are also routes protected by both backend and frontend, to minimize unauthorized access (Access with invalid email, no login, wrong password). I have used JWT Tokens for Authentication.
 
-![Screenshot from 2021-12-26 11-58-41](https://user-images.githubusercontent.com/56017960/147407073-4f18c330-6a24-4edd-bdff-f7a626f4968e.png)
 
 ---
 
